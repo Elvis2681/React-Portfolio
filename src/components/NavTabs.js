@@ -1,5 +1,9 @@
 import React from "react";
 
+<div>
+  <h1>hello world</h1>
+</div>;
+
 function NavItem({ active, page, handlePageChange }) {
   const href = `#${page.toLowerCase()}`;
   const className = active ? "nav-link active" : "nav-link";
@@ -14,7 +18,7 @@ function NavItem({ active, page, handlePageChange }) {
 }
 
 function NavTabs({ currentPage, handlePageChange }) {
-  const pageNames = ["Home", "About", "Blog", "Contact"];
+  const pageNames = ["Home", "About", "Project", "Contact"];
   const navItems = pageNames.map((page) => (
     <NavItem
       key={page}
@@ -24,6 +28,8 @@ function NavTabs({ currentPage, handlePageChange }) {
     />
   ));
   return <ul className="nav nav-tabs">{navItems}</ul>;
+
+  //add pictures and footer content
 }
 
 export default NavTabs;
